@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head lang='ES'>
+		<title>Recetas de Cocina</title>
+		<meta charset='UTF-8' />
+		<!--Librerías-->
+		<link rel="stylesheet" type="text/css" href="bin/Bootstrap/bootstrap.min.css">
+		<script type="text/javascript" src='bin/jQuery/jquery-1.11.3.min.js'></script>
+		<script type="text/javascript" src='bin/Bootstrap/bootstrap.min.js'></script>
+		<!--Custom CSS-->
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<!--Custom JS-->
+		<script type="text/javascript" src='js/login.js'></script>
+	</head>
+	<body>
+		<div class='col-md-3 col-sm-2 col-xs-1'></div>
+		<div id='content' class='col-md-6 col-sm-8 col-xs-10'>
+			<div id='login'>
+				<form autocomplete="on" role='form'>
+					<div id='userInput' class='form-group'>
+						<label for='user'>Usuario:</label>
+						<input name='user' type='text' required id='user' class='form-control' placeholder='Introduce tu usuario'>
+					</div>
+					<div id='passInput' class='form-group'>
+						<label for='pass'>Contraseña:</label>
+						<input name='pass' type='password' required id='pass' class='form-control' placeholder='Introduce la contraseña'>
+					</div>
+					<div class="checkbox">
+					    <label>
+					    	<input type="checkbox">Recordar contraseña
+					    </label>
+					</div>
+					<button type="submit" class="btn btn-primary">Enviar</button>
+				</form>
+			</div>
+		</div>
+		<div class='col-md-3 col-sm-2 col-xs-1'></div>
+	</body>
+</html>

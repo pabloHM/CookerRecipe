@@ -1,0 +1,10 @@
+#login{
+	height: 250px;
+	padding: 20px;
+	margin-top: 150px;
+	background-color: #000;
+}
+
+#login button{
+	margin: auto;
+}
