@@ -5,6 +5,15 @@
 	background-color: #000;
 }
 
-#login button{
-	margin: auto;
+#registrar a{
+	color: #fff;
+}
+
+#registrar a:hover{
+	text-decoration: none;
+}
+
+.error{
+	color: #F00;
+	display: none;
 }

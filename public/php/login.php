@@ -1,28 +1,26 @@
 <?php
-	define('DB_SERVER','localhost');
-	define('DB_NAME','DBRecetas');
-	define('DB_USER','root');
-	define('DB_PASS','');
+	$dbserver = "localhost";
+	$dbuser = "root";
+	$password = "";
+	$dbname = "dbrecetas";
 
-	$con = @mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
-	@mysqli_select_db(DB_NAME, $con);
+	$con = mysqli_connect($dbserver, $dbuser, $password, $dbname);
 
-	$user=$_POST['user'];
-	$pass=$_POST['pass'];
-	$result='';
+	session_start();
 
-	$sql = "SELECT * FROM tUsers WHERE user = '$user' and pass = '$pass'";
-    $rec = @mysqli_query($sql);
-    $count = 0;
+	$uName = $_POST['user'];
+	$pWord = $_POST['pass'];
+	$qry = "SELECT user, pass FROM tusers WHERE user='".$uName."' AND pass='".$pWord."'";
+	
+	$res = mysqli_query($con, $qry)or die($qry);
+	$num_row = mysqli_num_rows($res);
+	$row=mysqli_fetch_array($res);
 
-    while($row = @mysqli_fetch_object($rec)){
-        $count++;
-        $result = $row;
-    }
-
-    if($count == 1){
-        return 1;
-    }else{
-        return 0;
-    }
+	if($num_row == 1){
+		echo true;
+		$_SESSION['uName'] = $row['user'];
+	}
+	else{
+		echo false;
+	}
 ?>
