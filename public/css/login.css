@@ -17,3 +17,22 @@
 	color: #F00;
 	display: none;
 }
+
+#titleList{
+	margin: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.editar, .borrar{
+	float: right;
+	margin: 0px 5px;
+}
+
+.editar{
+	color: #FFCC00;
+}
+
+.borrar{
+	color: #900;
+}

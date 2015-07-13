@@ -13,11 +13,11 @@
 		<script type="text/javascript" src='js/login.js'></script>
 	</head>
 	<body>
-		<div class='col-md-3 col-sm-2 col-xs-1'></div>
 		<?php
 			session_start();
 			if(!isset($_SESSION['uName'])){
 		?>
+		<div class='col-md-3 col-sm-2 col-xs-1'></div>
 		<div id='content' class='col-md-6 col-sm-8 col-xs-10'>
 			<div id='login'>
 				<form autocomplete="on" role='form'>
@@ -41,35 +41,60 @@
 				</form>
 			</div>
 		</div>
+		<div class='col-md-3 col-sm-2 col-xs-1'></div>
 		<?php
 			}else{
 		?>
-		<div id='content' class='col-md-6 col-sm-8 col-xs-10'>
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-    				<div class="navbar-header">
-      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        					<span class="sr-only">Toggle navigation</span>
-        						<span class="icon-bar"></span>
-        						<span class="icon-bar"></span>
-        						<span class="icon-bar"></span>
-      					</button>
-      					<a class="navbar-brand" href="#">CoockerRecipe</a>
-   					</div>
-    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      					<!--<ul class="nav navbar-nav">
-        					<li class="active">
-        						<a href="#">Link <span class="sr-only">(current)</span></a>
-        					</li>
-      					</ul>-->
-      					<div class="navbar-form navbar-right">¡Bienvenido, <?php echo $_SESSION['uName']?>!</div>
-    				</div>
-  				</div>
-			</nav>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+  					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    					<span class="sr-only">Toggle navigation</span>
+    						<span class="icon-bar"></span>
+    						<span class="icon-bar"></span>
+    						<span class="icon-bar"></span>
+  					</button>
+  					<a class="navbar-brand" href="#">CoockerRecipe</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  					<!--<ul class="nav navbar-nav">
+    					<li class="active">
+    						<a href="#">Link <span class="sr-only">(current)</span></a>
+    					</li>
+  					</ul>-->
+  					<div class="navbar-form navbar-right">¡Bienvenido, <?php echo $_SESSION['uName']?>!</div>
+				</div>
+			</div>
+		</nav>
+		<div class='col-md-2 col-sm-2 col-xs-1'></div>
+		<div id='content' class='col-md-8 col-sm-8 col-xs-10'>
+			<div id='anadir' class='row'>
+				<button type="button" class="btn btn-default btn-lg col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">Añadir Receta</button>
+			</div>
+			<div class='row'>
+				<div id='titleList'>Lista de Recetas</div>
+				<div class="list-group">
+					<a href="#" class="list-group-item">
+						<span>Canelones de carne</span>
+						<span class='editar glyphicon glyphicon-pencil'></span>
+						<span class='borrar glyphicon glyphicon-remove'></span>
+					</a>
+					<a href="#" class="list-group-item">
+						<span>Pastel de chocolate</span>
+						<span class='editar glyphicon glyphicon-pencil'></span>
+						<span class='borrar glyphicon glyphicon-remove'></span>
+					</a>
+					<a href="#" class="list-group-item">
+						<span>Coca con piñones</span>
+						<span class='editar glyphicon glyphicon-pencil'></span>
+						<span class='borrar glyphicon glyphicon-remove'></span>
+					</a>
+				</div>
+			</div>
 		</div>
+		<div class='col-md-2 col-sm-2 col-xs-1'></div>
 		<?php
 			}
 		?>
-		<div class='col-md-3 col-sm-2 col-xs-1'></div>
 	</body>
 </html>
