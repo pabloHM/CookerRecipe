@@ -9,8 +9,9 @@
 	session_start();
 
 	$uName = $_POST['user'];
-	$pWord = $_POST['pass'];
-	$qry = "SELECT user, pass FROM tusers WHERE user='".$uName."' AND pass='".$pWord."'";
+	$pWord = md5($_POST['pass']);
+	$pWord = substr($pWord, 0, 15);
+	$qry = "SELECT * FROM tusers WHERE user='".$uName."' AND pass='".$pWord."'";
 	
 	$res = mysqli_query($con, $qry)or die($qry);
 	$num_row = mysqli_num_rows($res);
