@@ -37,7 +37,7 @@
 					<div id='loginError' class='error'>Hubo un error en los datos introducidos.</div>
 					<div id='bdError' class='error'>Hubo un error en la conexión a la base de datos. Disculpe las molestias.</div>
 					<button id='enviar' type="submit" class="btn btn-primary">Enviar</button>
-					<button id='registrar' class="btn btn-warning"><a href='pages/registro.php'>Registrar</a></button>
+					<a href='pages/registro.php'><button id='registrar' class="btn btn-warning">Registrar</button></a>
 				</form>
 			</div>
 		</div>
@@ -69,7 +69,7 @@
 		<div class='col-md-2 col-sm-2 col-xs-1'></div>
 		<div id='content' class='col-md-8 col-sm-8 col-xs-10'>
 			<div id='anadir' class='row'>
-				<button type="button" class="btn btn-default btn-lg col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2"><a href='pages/añadir.php'>Añadir Receta</a></button>
+				<a href='pages/anadir.php'><button type="button" class="btn btn-default btn-lg col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">Añadir Receta</button></a>
 			</div>
 			<div class='row'>
 				<div id='titleList'>Lista de Recetas</div>

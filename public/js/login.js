@@ -6,7 +6,7 @@ $(function(){
 		$.ajax({
             type: 'POST',
             url: 'php/login.php',
-            data: 'user=' + $('#user').val() + '&pass=' + $('#pass').val(),
+            data: 'user=' + $('#user').val().trim() + '&pass=' + $('#pass').val().trim(),
             success:function(data){
                 if(data==1){
                 	console.log("Login registrado");

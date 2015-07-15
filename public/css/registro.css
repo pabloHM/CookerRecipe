@@ -1,16 +1,15 @@
 .form-control{
-	border: 3px solid #ccc;
+	border: 3px solid #333;
 }
 
 label{
-	color: #CCC;
+	color: #333;
 }
 
 #registro{
 	height: 100%;
 	padding: 20px;
 	margin: 50px 0px;
-	background-color: #000;
 }
 
 #cancelar a{

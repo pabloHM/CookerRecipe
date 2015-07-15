@@ -1,6 +1,6 @@
 $(function(){
 	$("#user").keyup(function(){
-		var lon=$("#user").val().length;
+		var lon=$("#user").val().trim().length;
 		if(lon>=4){
 			$("#user").parent().removeClass("has-error");
 			$("#user").parent().addClass("has-success");
@@ -15,7 +15,7 @@ $(function(){
 
 	$("#email").keyup(function(){
 		var filter=/^[A-Za-z][A-Za-z0-9_]*@[A-Za-z0-9_]+\.[A-Za-z0-9_.]+[A-za-z]$/;
-		if (filter.test($("#email").val())){
+		if (filter.test($("#email").val().trim())){
 			$("#email").parent().removeClass("has-error");
 			$("#email").parent().addClass("has-success");
 			$("#emailInput .error").hide();
@@ -29,7 +29,7 @@ $(function(){
 
 	$("#pass").keyup(function(){
 		var filter=/^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,15}$/;
-		if(filter.test($("#pass").val())){
+		if(filter.test($("#pass").val().trim())){
 			$("#pass").parent().removeClass("has-error");
 			$("#pass").parent().addClass("has-success");
 			$("#passInput .error").hide();
@@ -42,7 +42,7 @@ $(function(){
 	});
 
 	$("#passRepet").keyup(function(){
-		if($("#passRepet").val()==$("#pass").val()){
+		if($("#passRepet").val().trim()==$("#pass").val().trim()){
 			$("#passRepet").parent().removeClass("has-error");
 			$("#passRepet").parent().addClass("has-success");
 			$("#passRepetInput .error").hide();
@@ -56,16 +56,16 @@ $(function(){
 
 	$("#registrar").click(function(evnt){
 		evnt.preventDefault();
-		if($("#user").val()==""){
+		if($("#user").val().trim()==""){
 			$("#userInput .error").show();
 		}
-		else if($("#email").val()==""){
+		else if($("#email").val().trim()==""){
 			$("#emailInput .error").show();
 		}
-		else if($("#pass").val()==""){
+		else if($("#pass").val().trim()==""){
 			$("#passInput .error").show();
 		}
-		else if($("#passRepet").val()==""){
+		else if($("#passRepet").val().trim()==""){
 			$("#passRepetInput .error").show();
 		}
 		else{
