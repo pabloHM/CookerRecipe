@@ -60,7 +60,7 @@
 					</div>
 					<div id='pasoInput' class='form-group'>
 						<label for='paso'>Pasos*:</label>
-						<textarea name='paso' id='paso' rows="8" required class='form-control' placeholder='Introduce los pasos.' maxlength="300"></textarea>
+						<textarea name='paso' id='paso' rows="8" required class='form-control' placeholder='Introduce los pasos.' maxlength="1000"></textarea>
 						<p class='error'>Este campo no puede quedar vacío.</p>
 					</div>
 					<p id='errorDatos'>Cubre los datos obligatorios correctamente.</p>
