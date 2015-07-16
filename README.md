@@ -5,9 +5,9 @@ Funcionalidades:
   - Ver, añadir y borrar recetas.
 
 Lenguajes:
-  HTML5
-  CSS3
-  Javascript
-    jQuery 1.11.3
-    Bootstrap 3.3.5
-  PHP 5.6.10
+  - HTML5
+  - CSS3
+  - Javascript
+    - jQuery 1.11.3
+    - Bootstrap 3.3.5
+  - PHP 5.6.10
