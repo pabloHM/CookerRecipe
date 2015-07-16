@@ -3,6 +3,7 @@
 Funcionalidades:
   - Registro y login de usuarios.
   - Ver, añadir y borrar recetas.
+
 Lenguajes:
   HTML5
   CSS3
