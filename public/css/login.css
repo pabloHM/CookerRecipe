@@ -18,6 +18,7 @@
 	display: none;
 }
 
+/*Logueado*/
 #titleList{
 	margin: 20px;
 	font-size: 20px;
@@ -35,4 +36,25 @@
 
 .borrar{
 	color: #900;
+}
+
+.pReceta{
+	background-color: #FFC;
+	display:none;
+}
+
+.tIng, .tPasos{
+	text-indent: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px;
+}
+
+.ingred, .prep{
+	text-indent: 10px;
+	margin: 0px 20px;
+}
+
+.pasos{
+	padding-bottom: 20px;
 }

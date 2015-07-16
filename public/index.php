@@ -45,6 +45,7 @@
 		<?php
 			}else{
 		?>
+		<script type="text/javascript" src='js/misRecetas.js'></script>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -62,7 +63,7 @@
     						<a href="#">Link <span class="sr-only">(current)</span></a>
     					</li>
   					</ul>-->
-  					<div class="navbar-form navbar-right">¡Bienvenido, <?php echo $_SESSION['uName']?>!</div>
+  					<span class="navbar-form navbar-right">¡Bienvenido, <span class='nameUser'><?php echo $_SESSION['uName']?></span>!</span>
 				</div>
 			</div>
 		</nav>
@@ -73,24 +74,9 @@
 			</div>
 			<div class='row'>
 				<div id='titleList'>Lista de Recetas</div>
-				<div class="list-group">
-					<a href="#" class="list-group-item">
-						<span>Canelones de carne</span>
-						<span class='editar glyphicon glyphicon-pencil'></span>
-						<span class='borrar glyphicon glyphicon-remove'></span>
-					</a>
-					<a href="#" class="list-group-item">
-						<span>Pastel de chocolate</span>
-						<span class='editar glyphicon glyphicon-pencil'></span>
-						<span class='borrar glyphicon glyphicon-remove'></span>
-					</a>
-					<a href="#" class="list-group-item">
-						<span>Coca con piñones</span>
-						<span class='editar glyphicon glyphicon-pencil'></span>
-						<span class='borrar glyphicon glyphicon-remove'></span>
-					</a>
-				</div>
+				<div class="list-group"></div>
 			</div>
+				
 		</div>
 		<div class='col-md-2 col-sm-2 col-xs-1'></div>
 		<?php
