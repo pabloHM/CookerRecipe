@@ -26,12 +26,13 @@ $(function(){
 			        url: 'php/datosReceta.php',
 			        data: 'user=' + $('.nameUser').text()+'&titulo='+$(':first-child', this).text(),
 			        success:function(data){
-			        	var ingredientes=data.split("~")[0];
-			        	var pasos=data.split("~")[1];
+			        	var ingredientes=data.split("^*")[0];
+			        	var pasos=data.split("^*")[1];
 			        	var ingArray=ingredientes.split(";");
 			        	for(var i=0; i<ingArray.length-1; i++){
 			        		$(".ingredientes").append("<p class='ingred'>"+ingArray[i]+"</p>");
 			        	}
+			        	
 			        	var saltoPasos=pasos.split("\n");
 			        	for(var i=0; i<saltoPasos.length; i++){
 			        		$(".pasos").append("<p class='prep'>"+saltoPasos[i]+"</p>");

@@ -1,8 +1,8 @@
 <?php
-	$dbserver = "localhost";
-	$dbuser = "root";
-	$password = "";
-	$dbname = "dbrecetas";
+	$dbserver = "ec2-54-217-202-110.eu-west-1.compute.amazonaws.com";
+	$dbuser = "ujmfyynkivhwkj";
+	$password = "Yzmrp7SVoVJa5e5mrs0ZsPlx8q";
+	$dbname = "dfrno01mk8o5ga";
 
 	$con = mysqli_connect($dbserver, $dbuser, $password, $dbname);
 
@@ -20,6 +20,8 @@
 	if($num_row == 1){
 		echo true;
 		$_SESSION['uName'] = $row['user'];
+		$_SESSION['tiempo']=date("Y-m-d H:i:s");
+		$_SESSION['recordar']=true;
 	}
 	else{
 		echo false;

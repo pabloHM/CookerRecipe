@@ -15,6 +15,14 @@
 	<body>
 		<?php
 			session_start();
+			if(isset($_SESSION['tiempo'])){
+				$ahora=date("Y-m-d H:i:s");
+				$diffTiempo=strtotime($ahora)-strtotime($_SESSION['tiempo']);
+				if($diffTiempo>1000){
+					session_destroy();
+				}
+			}
+
 			if(!isset($_SESSION['uName'])){
 		?>
 		<div class='col-md-3 col-sm-2 col-xs-1'></div>

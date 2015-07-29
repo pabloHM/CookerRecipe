@@ -1,8 +1,8 @@
 <?php
-	$dbserver = "localhost";
-	$dbuser = "root";
-	$password = "";
-	$dbname = "dbrecetas";
+	$dbserver = "ec2-54-217-202-110.eu-west-1.compute.amazonaws.com";
+	$dbuser = "ujmfyynkivhwkj";
+	$password = "Yzmrp7SVoVJa5e5mrs0ZsPlx8q";
+	$dbname = "dfrno01mk8o5ga";
 
 	$con = mysqli_connect($dbserver, $dbuser, $password, $dbname);
 
