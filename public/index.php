@@ -15,10 +15,10 @@
 	<body>
 		<?php
 			session_start();
-			if(isset($_SESSION['tiempo'])){
+			if(isset($_SESSION['tiempo']) && $_SESSION['recordar']=='false'){
 				$ahora=date("Y-m-d H:i:s");
 				$diffTiempo=strtotime($ahora)-strtotime($_SESSION['tiempo']);
-				if($diffTiempo>1000){
+				if($diffTiempo>10){
 					session_destroy();
 				}
 			}
@@ -39,13 +39,13 @@
 					</div>
 					<div class="checkbox">
 					    <label>
-					    	<input type="checkbox">Recordar contraseña
+					    	<input type="checkbox" id='saveCheck'>Recordar contraseña
 					    </label>
 					</div>
 					<div id='loginError' class='error'>Hubo un error en los datos introducidos.</div>
 					<div id='bdError' class='error'>Hubo un error en la conexión a la base de datos. Disculpe las molestias.</div>
 					<button id='enviar' type="submit" class="btn btn-primary">Enviar</button>
-					<a href='pages/registro.php'><button id='registrar' class="btn btn-warning">Registrar</button></a>
+					<a href='pages/registro.php'><div id='registrar' class="btn btn-warning">Registrar</div></a>
 				</form>
 			</div>
 		</div>
@@ -55,23 +55,13 @@
 		?>
 		<script type="text/javascript" src='js/misRecetas.js'></script>
 		<nav class="navbar navbar-default">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="navbar-header">
-  					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-    					<span class="sr-only">Toggle navigation</span>
-    						<span class="icon-bar"></span>
-    						<span class="icon-bar"></span>
-    						<span class="icon-bar"></span>
-  					</button>
   					<a class="navbar-brand" href="#">CoockerRecipe</a>
 				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  					<!--<ul class="nav navbar-nav">
-    					<li class="active">
-    						<a href="#">Link <span class="sr-only">(current)</span></a>
-    					</li>
-  					</ul>-->
-  					<span class="navbar-form navbar-right">¡Bienvenido, <span class='nameUser'><?php echo $_SESSION['uName']?></span>!</span>
+				<div class='navbar-user'>
+					¡Bienvenido, <span class='nameUser'><?php echo $_SESSION['uName']?></span>!<br>
+					<a id='logout' href='php/logout.php'>Logout</a>
 				</div>
 			</div>
 		</nav>

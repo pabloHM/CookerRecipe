@@ -6,10 +6,11 @@ $(function(){
 		$.ajax({
             type: 'POST',
             url: 'php/login.php',
-            data: 'user=' + $('#user').val().trim() + '&pass=' + $('#pass').val().trim(),
+            data: 'user=' + $('#user').val().trim() + '&pass=' + $('#pass').val().trim() + '&save='+ $('#saveCheck').prop('checked'),
             success:function(data){
                 if(data==1){
                 	console.log("Login registrado");
+                    console.log($('#saveCheck').prop('checked'));
                 	location.reload();
                 }
                 else{
