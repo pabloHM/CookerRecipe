@@ -33,6 +33,11 @@
 	margin-top: 8px;
 }
 
+#logout{
+	font-size: 11px;
+	float: right;
+}
+
 #titleList{
 	margin: 20px;
 	font-size: 20px;
@@ -71,9 +76,4 @@
 
 .pasos{
 	padding-bottom: 20px;
-}
-
-#logout{
-	font-size: 11px;
-	float: right;
 }
