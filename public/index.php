@@ -18,7 +18,7 @@
 			if(isset($_SESSION['tiempo']) && $_SESSION['recordar']=='false'){
 				$ahora=date("Y-m-d H:i:s");
 				$diffTiempo=strtotime($ahora)-strtotime($_SESSION['tiempo']);
-				if($diffTiempo>10){
+				if($diffTiempo>28800){ //8 horas
 					session_destroy();
 				}
 			}
@@ -31,11 +31,13 @@
 				<form autocomplete="on" role='form'>
 					<div id='userInput' class='form-group'>
 						<label for='user'>Usuario:</label>
-						<input name='user' type='text' required id='user' class='form-control' placeholder='Introduce tu usuario'>
+						<input name='user' type='text' required id='user' class='form-control' placeholder='Introduce tu usuario' maxlength="20">
+						<p class='error'>Debe contener entre 4-20 caracteres.</p>
 					</div>
 					<div id='passInput' class='form-group'>
 						<label for='pass'>Contraseña:</label>
-						<input name='pass' type='password' required id='pass' class='form-control' placeholder='Introduce la contraseña'>
+						<input name='pass' type='password' required id='pass' class='form-control' placeholder='Introduce la contraseña' maxlength="15">
+						<p class='error'>Debe contener al menos un número y entre 6-15 caracteres.</p>
 					</div>
 					<div class="checkbox">
 					    <label>

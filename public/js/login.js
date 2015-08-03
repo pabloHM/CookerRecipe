@@ -1,6 +1,32 @@
 $(function(){
-	var timeSlide = 1000;
-	var contClicks=0;
+	$("#user").keyup(function(){
+        var lon=$("#user").val().trim().length;
+        if(lon>=4){
+            $("#user").parent().removeClass("has-error");
+            $("#user").parent().addClass("has-success");
+            $("#userInput .error").hide();
+        }
+        else{
+            $("#user").parent().removeClass("has-success");
+            $("#user").parent().addClass("has-error");
+            $("#userInput .error").show();
+        }
+    });
+
+    $("#pass").keyup(function(){
+        var filter=/^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,15}$/;
+        if(filter.test($("#pass").val().trim())){
+            $("#pass").parent().removeClass("has-error");
+            $("#pass").parent().addClass("has-success");
+            $("#passInput .error").hide();
+        }
+        else{
+            $("#pass").parent().removeClass("has-success");
+            $("#pass").parent().addClass("has-error");
+            $("#passInput .error").show();
+        }
+    });
+    
 	$('#enviar').click(function(evnt){
 		evnt.preventDefault();
 		$.ajax({
@@ -14,11 +40,9 @@ $(function(){
                 	location.reload();
                 }
                 else{
-                	contClicks++;
+                	$("#loginError").hide();
                 	$("#loginError").show();
-                	if(contClicks==1){
-                		$("#login").height($("#login").height()+$("#loginError").height());
-                	}
+                	$("#login").height($("#login").height()+$("#loginError").height());
                 	console.log(data);
                 }
             },

@@ -2,7 +2,14 @@
 	height: 250px;
 	padding: 20px;
 	margin-top: 150px;
-	background-color: #000;
+}
+
+.form-control{
+	border: 3px solid #333;
+}
+
+label{
+	color: #333;
 }
 
 #registrar a{
