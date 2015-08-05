@@ -1,0 +1,44 @@
+.container{
+	display: block;
+}
+
+.navbar-header{
+	display: inline-block;
+}
+
+.navbar-user{
+	display: inline-block;
+	float: right;
+	margin-top: 8px;
+}
+
+#logout{
+	font-size: 11px;
+	float: right;
+}
+
+.form-control{
+	border: 3px solid #333;
+}
+
+label{
+	color: #333;
+}
+
+.error, #errorAnadir, #errorDatos{
+	color: #F00;
+	font-size: 10px;
+	display: none;
+}
+
+#sigIng, #sigPaso{
+	margin-top: 15px;
+}
+
+textarea{
+	resize: none;
+}
+
+.ingrediente{
+	margin-top: 10px;
+}
